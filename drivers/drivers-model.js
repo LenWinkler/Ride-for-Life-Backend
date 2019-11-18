@@ -2,6 +2,7 @@ const db = require('../data/dbConfig.js');
 
 module.exports = {
     find,
+    findBy,
     findById,
     findReviews,
     add,
@@ -13,6 +14,10 @@ function find() {
     return db('drivers')
 }
 
+function findBy(filter) {
+    return('drivers').where(filter)
+}
+
 function findById(id) {
     return db('drivers').where({ id }).first();
 }
@@ -21,7 +26,7 @@ function findReviews(id) {
     return db('reviews').where({ driver_id: id })
 }
 
-function add(driver) {
+async function add(driver) {
     return db('drivers')
     .returning(['id', 'drivers_name'])
     .insert(driver)
@@ -30,7 +35,7 @@ function add(driver) {
     })
 }
 
-function update(changes, id) {
+async function update(changes, id) {
     return db('drivers')
     .where({ id })
     .update({ ...changes })
@@ -39,7 +44,7 @@ function update(changes, id) {
     })
 }
 
-function remove(id) {
+async function remove(id) {
     return db('users')
     .where({ id })
     .then(response => {

@@ -11,7 +11,7 @@ function findById(id) {
     return db('reviews').where({ id }).first();
 }
 
-function add(review) {
+async function add(review) {
     return db('reviews')
     .returning(['id', 'review_text'])
     .insert(review)
@@ -20,7 +20,7 @@ function add(review) {
     })
 }
 
-function update(changes, id) {
+async function update(changes, id) {
     return db('reviews')
     .where({ id })
     .update({ ...changes })
@@ -29,7 +29,7 @@ function update(changes, id) {
     })
 }
 
-function remove(id) {
+async function remove(id) {
     return db('reviews')
     .where({ id })
     .then(response => {

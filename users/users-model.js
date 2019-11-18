@@ -1,11 +1,16 @@
 const db = require('../data/dbConfig.js');
 
 module.exports = {
+    findBy,
     findById,
     findReviews,
     add,
     update,
     remove
+}
+
+function findBy(filter) {
+    return db('users').where(filter)
 }
 
 function findById(id) {

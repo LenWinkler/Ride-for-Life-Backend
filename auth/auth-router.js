@@ -68,3 +68,41 @@ router.post('/register_driver', (req, res) => {
             res.status(500).json(err)
         })
 });
+
+router.post('/user_login', (req, res) => {
+    let { email, password } = req.body;
+
+    Users.findBy({ email })
+        .first()
+        .then(user => {
+            if (user && bcrypt.compareSync(password, user.password)) {
+                const token = getJwtTokenUser(user);
+
+                res.status(200).json(token)
+            } else {
+                res.status(400).json({ message: 'Invalid credentials' })
+            }
+        })
+        .catch(err => {
+            res.status(500).json(err)
+        });
+});
+
+router.post('/driver_login', (req, res) => {
+    let { email, password } = req.body;
+
+    Drivers.findBy({ email })
+        .first()
+        .then(driver => {
+            if (driver && bcrypt.compareSync(password, driver.password)) {
+                const token = getJwtTokenUser(driver);
+
+                res.status(200).json(token)
+            } else {
+                res.status(400).json({ message: 'Invalid credentials' })
+            }
+        })
+        .catch(err => {
+            res.status(500).json(err)
+        });
+});
