@@ -1,7 +1,6 @@
 const router = require('express').Router();
 
 const Users = require('./users-model.js');
-const Reviews = require('../reviews/reviews-model.js');
 const restricted = require('../auth/restricted-middleware.js');
 
 router.get('/:id',restricted, (req, res) => {
