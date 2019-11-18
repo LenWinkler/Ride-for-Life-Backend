@@ -95,7 +95,7 @@ router.post('/driver_login', (req, res) => {
         .first()
         .then(driver => {
             if (driver && bcrypt.compareSync(password, driver.password)) {
-                const token = getJwtTokenUser(driver);
+                const token = getJwtTokenDriver(driver);
 
                 res.status(200).json(token)
             } else {
