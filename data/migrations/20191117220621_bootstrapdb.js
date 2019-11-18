@@ -8,6 +8,7 @@ exports.up = function(knex) {
       tbl.string('users_plot').notNullable();
       tbl.string('users_phone_number').notNullable();
       tbl.string('users_email').unique().notNullable();
+      tbl.string('password').notNullable();
       tbl.string('due_date');
       tbl.string('role').defaultTo('user');
   })
@@ -18,6 +19,7 @@ exports.up = function(knex) {
       tbl.string('drivers_plot').notNullable();
       tbl.string('drivers_phone_number').unique().notNullable();
       tbl.string('drivers_email').unique().notNullable();
+      tbl.string('password').notNullable();
       tbl.integer('drivers_price').unsigned().notNullable();
       tbl.string('role').defaultTo('driver');
   })

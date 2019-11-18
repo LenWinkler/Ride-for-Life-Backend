@@ -29,7 +29,7 @@ function findReviews(id) {
 async function add(driver) {
     return db('drivers')
     .returning(['id', 'drivers_name'])
-    .insert(driver)
+    .insert(driver, 'id')
     .then(response => {
         return findById(response[0])
     })
