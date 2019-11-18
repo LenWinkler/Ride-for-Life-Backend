@@ -14,7 +14,7 @@ function find() {
 }
 
 function findById(id) {
-    return db('drivers').where({ id })
+    return db('drivers').where({ id }).first();
 }
 
 function findReviews(id) {
