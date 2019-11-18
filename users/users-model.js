@@ -16,7 +16,7 @@ function findReviews(id) {
     return db('reviews').where({ user_id: id })
 }
 
-function add(user) {
+async function add(user) {
     return db('users')
     .returning(['id', 'users_name'])
     .insert(user)
@@ -25,7 +25,7 @@ function add(user) {
     })
 }
 
-function update(changes, id) {
+async function update(changes, id) {
     return db('users')
     .where({ id })
     .update({ ...changes })
@@ -34,7 +34,7 @@ function update(changes, id) {
     })
 }
 
-function remove(id) {
+async function remove(id) {
     return db('users')
     .where({ id })
     .then(res => {
