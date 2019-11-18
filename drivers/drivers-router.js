@@ -33,3 +33,5 @@ router.get('/:id/reviews', restricted, (req, res) => {
             res.status(500).json(err)
         })
 });
+
+module.exports = router;

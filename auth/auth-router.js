@@ -70,34 +70,35 @@ router.post('/register_driver', (req, res) => {
 });
 
 router.post('/user_login', (req, res) => {
-    let { email, password } = req.body;
+    let { users_email, password } = req.body;
 
-    Users.findBy({ email })
+    Users.findBy({ users_email })
         .first()
         .then(user => {
             if (user && bcrypt.compareSync(password, user.password)) {
                 const token = getJwtTokenUser(user);
 
-                res.status(200).json(token)
+                res.status(200).json({ token: token })
             } else {
                 res.status(400).json({ message: 'Invalid credentials' })
             }
         })
         .catch(err => {
+            console.log(err);
             res.status(500).json(err)
         });
 });
 
 router.post('/driver_login', (req, res) => {
-    let { email, password } = req.body;
+    let { drivers_email, password } = req.body;
 
-    Drivers.findBy({ email })
+    Drivers.findBy({ drivers_email })
         .first()
         .then(driver => {
             if (driver && bcrypt.compareSync(password, driver.password)) {
                 const token = getJwtTokenDriver(driver);
 
-                res.status(200).json(token)
+                res.status(200).json({ token: token })
             } else {
                 res.status(400).json({ message: 'Invalid credentials' })
             }
@@ -106,3 +107,5 @@ router.post('/driver_login', (req, res) => {
             res.status(500).json(err)
         });
 });
+
+module.exports = router;

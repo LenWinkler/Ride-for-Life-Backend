@@ -42,3 +42,5 @@ router.delete('/:id', restricted, (req, res) => {
             res.status(500).json(err)
         })
 })
+
+module.exports = router;

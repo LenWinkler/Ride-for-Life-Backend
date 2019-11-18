@@ -15,7 +15,7 @@ function find() {
 }
 
 function findBy(filter) {
-    return('drivers').where(filter)
+    return db('drivers').where(filter)
 }
 
 function findById(id) {
