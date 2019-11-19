@@ -3,7 +3,6 @@
 **All values are strings unless otherwise noted**
 **All values are required unless otherwise noted**
 
-https://ride-for-life-back-end.herokuapp.com/
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/register_user
 * Endpoint to register a new user
 * Request example:
