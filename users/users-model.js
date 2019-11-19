@@ -34,7 +34,7 @@ async function update(changes, id) {
     return db('users')
     .where({ id })
     .update({ ...changes })
-    .then(response => {
+    .then(respon => {
         return findById(id)
     })
 }
