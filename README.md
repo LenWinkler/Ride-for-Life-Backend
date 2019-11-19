@@ -19,7 +19,7 @@
 }
 ```
 
-* Returns:
+* Returns new user:
 
 ```
 {
@@ -49,7 +49,7 @@
 }
 ```
 
-* Returns:
+* Returns new driver:
 
 ```
 {
@@ -75,7 +75,7 @@
 }
 ```
 
-* Returns:
+* Returns id and token:
 
 ```
 { 
@@ -96,7 +96,7 @@
 }
 ```
 
-* Returns:
+* Returns id and token:
 
 ```
 { 
@@ -112,8 +112,9 @@
 * Endpoint to get list of all drivers
 
 ### GET https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
+
 * Endpoint to get single driver by id
-* Returns:
+* Returns driver's info:
 
 ```
 {
@@ -129,6 +130,7 @@
 ```
 
 ### GET https://ride-for-life-back-end.herokuapp.com/api/drivers/:id/reviews
+
 * Endpoint to get all reviews associated with a specific driver id
 * Returns an array of review objects:
 
@@ -158,7 +160,7 @@
 }
 ```
 
-* Returns:
+* Returns the updated driver:
 ```
 {
     "id": 3,
@@ -175,10 +177,86 @@
 ### DELETE https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
 
 * Endpoint to delete a driver
-* Returns:
+* Returns success message:
 
 ```
 {
     "message": "Driver deleted successfully"
+}
+```
+
+### GET https://ride-for-life-back-end.herokuapp.com/api/users/:id
+
+* Endpoint to get user by id
+* Returns user's info:
+
+```
+{
+    "id": 4,
+    "users_name": "Example User",
+    "users_plot": "165",
+    "users_phone_number": "164-1535-1256",
+    "users_email": "exampleuser@gmail.com",
+    "password": "$2a$11$CtbBrM.jNqDHhUN3g1iZnOi8dSXndORhqk3203TK6AUafIhKSFP.2",
+    "due_date": "2019-12-15",
+    "role": "user"
+}
+```
+
+### GET https://ride-for-life-back-end.herokuapp.com/api/users/:id/reviews
+
+* Endpoint to get all reviews associated with a user id
+* Returns an array of review objects:
+
+```
+[
+    {
+        "id": 2,
+        "reviewer": "seeduser1",
+        "review_date": "2019-08-11",
+        "rating": 3,
+        "review_text": "Took a long time to get to my house but otherwise good",
+        "user_id": 1,
+        "driver_id": 3
+    }
+]
+```
+
+### PUT https://ride-for-life-back-end.herokuapp.com/api/users/:id
+
+* Endpoint to update info for a user
+* Request example:
+
+```
+{
+  "users_name": "updated_seeduser1",
+  "users_plot": "111",
+  "users_phone_number": "125-1234-3456"
+}
+```
+
+* Returns the updated user:
+
+```
+{
+    "id": 1,
+    "users_name": "updated_seeduser1",
+    "users_plot": "111",
+    "users_phone_number": "125-1234-3456",
+    "users_email": "seeduser1@gmail.com",
+    "password": "$2a$10$CWHJ2fQ8j5y8ZBQ6WnSs5.JRu0KSwBLrRg6GMbLlIB7LKO5OCcoQq",
+    "due_date": "2019-12-15",
+    "role": "user"
+}
+```
+
+### DELETE https://ride-for-life-back-end.herokuapp.com/api/users/:id
+
+* Endpoint to delete a user
+* Returns success message:
+
+```
+{
+    "message": "User deleted successfully"
 }
 ```
