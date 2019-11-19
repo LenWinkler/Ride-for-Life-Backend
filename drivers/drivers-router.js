@@ -39,6 +39,7 @@ router.put('/:id', restricted, (req, res) => {
             res.status(200).json(changes)
         })
         .catch(err => {
+            console.log(err)
             res.status(500).json(err)
         })
 })

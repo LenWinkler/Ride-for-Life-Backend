@@ -39,7 +39,7 @@ async function update(changes, id) {
     return db('drivers')
     .where({ id })
     .update({ ...changes })
-    .then(response => {
+    .then(respon => {
         return findById(id)
     })
 }
