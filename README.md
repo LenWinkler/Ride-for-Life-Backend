@@ -146,4 +146,39 @@
 ]
 ```
 
-### PUT 
+### PUT https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
+
+* Endpoint to update info for a driver
+* Request example:
+
+```
+{
+  "drivers_name": "updated_seeddriver3",
+  "drivers_price": 85
+}
+```
+
+* Returns:
+```
+{
+    "id": 3,
+    "drivers_name": "updated_seeddriver3",
+    "drivers_plot": "321",
+    "drivers_phone_number": "234-123-4567",
+    "drivers_email": "seeddriver3@gmail.com",
+    "password": "$2a$10$nQYuikOFqTed.qKJQyhp1.hNOfIxHbzycv620x60e.pzCoxv/R21W",
+    "drivers_price": 85,
+    "role": "driver"
+}
+```
+
+### DELETE https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
+
+* Endpoint to delete a driver
+* Returns:
+
+```
+{
+    "message": "Driver deleted successfully"
+}
+```
