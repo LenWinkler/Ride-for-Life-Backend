@@ -1,7 +1,8 @@
 ## Endpoints
 
-**All values are strings unless otherwise noted**
-**All values are required unless otherwise noted**
+#### **All values are strings unless otherwise noted**
+
+#### **All values are required unless otherwise noted**
 
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/register_user
 * Endpoint to register a new user
@@ -13,7 +14,7 @@
   users_phone_number: "164-1535-1256", 
   users_email: "exampleuser@gmail.com", 
   password: "password", 
-  due_date: "2019-12-15" // optional
+  due_date: "2019-12-15" <------ OPTIONAL
 }
 ```
 * Returns:
@@ -39,7 +40,7 @@
   drivers_phone_number: "455-743-4567",
   drivers_email: "exampledriver@gmail.com",
   password: "password",
-  drivers_price: 50
+  drivers_price: 50 // <-------- INTEGER
 }
 ```
 * Returns:
