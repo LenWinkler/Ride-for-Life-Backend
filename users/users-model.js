@@ -24,7 +24,7 @@ function findReviews(id) {
 async function add(user) {
     return db('users')
     .returning(['id', 'users_name'])
-    .insert(user)
+    .insert(user, 'id')
     .then(response => {
         return findById(response[0])
     })
