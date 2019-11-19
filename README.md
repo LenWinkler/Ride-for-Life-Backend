@@ -69,7 +69,7 @@
 ```
 { 
   id: 4,
-  "token":       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkV4YW1wbGUgVXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTc0MTE1OTY2LCJleHAiOjE1NzQyMDIzNjZ9.5SMRUcR0BzS6I4Bceh7UuuTzvU0IBEGI6y2QQ_jKkJM"
+  "token":    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibmFtZSI6IkV4YW1wbGUgVXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNTc0MTE1OTY2LCJleHAiOjE1NzQyMDIzNjZ9.5SMRUcR0BzS6I4Bceh7UuuTzvU0IBEGI6y2QQ_jKkJM"
 }
 ```
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/driver_login
