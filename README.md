@@ -261,4 +261,73 @@
 }
 ```
 
-### POST 
+### POST https://ride-for-life-back-end.herokuapp.com/api/reviews
+
+* Endpoint to add a review
+* Request example:
+
+```
+{
+        "reviewer": "Example User",
+        "review_date": "2019-09-12",
+        "rating": 5,
+        "review_text": "Great driver. No issues at all",
+        "user_id": 2,
+        "driver_id": 3
+}
+```
+
+* Returns added review:
+
+```
+{
+    "id": 4,
+    "reviewer": "Example User",
+    "review_date": "2019-09-12",
+    "rating": 5,
+    "review_text": "Great driver. No issues at all",
+    "user_id": 2,
+    "driver_id": 3
+}
+```
+
+### PUT https://ride-for-life-back-end.herokuapp.com/api/reviews/:id
+
+* Endpoint to update a review
+* Request example:
+
+```
+{
+  "reviewer": "Update Example",
+  "review_date": "2018-07-21",
+  "rating": 4,
+  "review_text": "Driver was good. No complaints",
+  "user_id": 2,
+  "driver_id": 1
+}
+```
+
+* Returns updated review:
+
+```
+{
+    "id": 4,
+    "reviewer": "Update Example",
+    "review_date": "2018-07-21",
+    "rating": 4,
+    "review_text": "Driver was good. No complaints",
+    "user_id": 2,
+    "driver_id": 1
+}
+```
+
+### DELETE https://ride-for-life-back-end.herokuapp.com/api/reviews/:id
+
+* Endpoint to delete a review
+* Returns success message:
+
+```
+{
+    "message": "Review deleted successfully"
+}
+```
