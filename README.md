@@ -260,3 +260,5 @@
     "message": "User deleted successfully"
 }
 ```
+
+### POST 
