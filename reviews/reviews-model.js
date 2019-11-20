@@ -37,10 +37,5 @@ async function update(changes, id) {
 async function remove(id) {
     return db('reviews')
     .where({ id })
-    .then(response => {
-        db('reviews')
-        .where({ id })
-        .del()
-        return res[0]
-    })
+    .del()
 }
