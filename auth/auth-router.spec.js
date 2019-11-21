@@ -18,8 +18,8 @@ describe('auth endpoints', function() {
             await db('drivers').truncate();
         })
 
-        it('should return 201 status', function() {
-            return request(server)
+        it('should return 201 status', async function() {
+            await request(server)
             .post('/api/auth/register_user')
             .send({ 
                 users_name: "Testing Example", 
@@ -34,8 +34,8 @@ describe('auth endpoints', function() {
              })
         });
 
-        it('should return json', function() {
-            return request(server)
+        it('should return json', async function() {
+            await request(server)
             .post('/api/auth/register_user')
             .send({ 
                 users_name: "Testing Example", 
@@ -50,8 +50,8 @@ describe('auth endpoints', function() {
              })
         });
 
-        it('should return 201 status', function() {
-            return request(server)
+        it('should return 201 status', async function() {
+            await request(server)
             .post('/api/auth/register_driver')
             .send({ 
                 drivers_name: "Test Example", 
@@ -66,8 +66,8 @@ describe('auth endpoints', function() {
              })
         });
 
-        it('should return json', function() {
-            return request(server)
+        it('should return json', async function() {
+            await request(server)
             .post('/api/auth/register_driver')
             .send({ 
                 drivers_name: "Test Example", 
@@ -113,7 +113,7 @@ describe('auth endpoints', function() {
         })
 
         it('should return 200 status', async function() {
-            return await request(server)
+            await request(server)
             .post('/api/auth/user_login')
             .send({ users_email: "testuser@gmail.com", password: "password" })
             .then(res => {
@@ -123,7 +123,7 @@ describe('auth endpoints', function() {
         })
 
         it('should return a token', async function() {
-            return await request(server)
+            await request(server)
             .post('/api/auth/user_login')
             .send({ users_email: "testuser@gmail.com", password: "password" })
             .then(res => {
@@ -132,7 +132,7 @@ describe('auth endpoints', function() {
         })
 
         it('should return 200 status', async function() {
-            return await request(server)
+            await request(server)
             .post('/api/auth/driver_login')
             .send({ drivers_email: "testdriver@gmail.com", password: "password" })
             .then(res => {
@@ -142,7 +142,7 @@ describe('auth endpoints', function() {
         })
 
         it('should return a token', async function() {
-            return await request(server)
+            await request(server)
             .post('/api/auth/driver_login')
             .send({ drivers_email: "testdriver@gmail.com", password: "password" })
             .then(res => {
