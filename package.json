@@ -1,11 +1,11 @@
 {
   "name": "Back-End",
   "version": "1.0.0",
-  "description": "",
+  "description": "Back end for Ride for Life app",
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env ENVIRONMENT=testing jest --watch",
     "start": "node index.js"
   },
   "repository": {
@@ -33,6 +33,9 @@
     "sqlite3": "^4.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "cross-env": "^6.0.3",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
   }
 }

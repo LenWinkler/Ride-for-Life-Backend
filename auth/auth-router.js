@@ -71,11 +71,14 @@ router.post('/register_driver', (req, res) => {
 
 router.post('/user_login', (req, res) => {
     let { users_email, password } = req.body;
+    
 
     Users.findBy({ users_email })
         .first()
         .then(user => {
+            
             let {id} = user;
+            
             if (user && bcrypt.compareSync(password, user.password)) {
                 const token = getJwtTokenUser(user);
 
