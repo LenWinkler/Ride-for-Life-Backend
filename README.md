@@ -270,10 +270,10 @@
 {
         "reviewer": "Example User",
         "review_date": "2019-09-12",
-        "rating": 5,
+        "rating": 5, <-------- INTEGER
         "review_text": "Great driver. No issues at all",
-        "user_id": 2,
-        "driver_id": 3
+        "user_id": 2, <-------- INTEGER
+        "driver_id": 3 <-------- INTEGER
 }
 ```
 
@@ -284,10 +284,10 @@
     "id": 4,
     "reviewer": "Example User",
     "review_date": "2019-09-12",
-    "rating": 5,
+    "rating": 5, <-------- INTEGER
     "review_text": "Great driver. No issues at all",
-    "user_id": 2,
-    "driver_id": 3
+    "user_id": 2, <-------- INTEGER
+    "driver_id": 3 <-------- INTEGER
 }
 ```
 
@@ -300,10 +300,10 @@
 {
   "reviewer": "Update Example",
   "review_date": "2018-07-21",
-  "rating": 4,
+  "rating": 4, <-------- INTEGER
   "review_text": "Driver was good. No complaints",
-  "user_id": 2,
-  "driver_id": 1
+  "user_id": 2, <-------- INTEGER
+  "driver_id": 1 <-------- INTEGER
 }
 ```
 
@@ -314,10 +314,10 @@
     "id": 4,
     "reviewer": "Update Example",
     "review_date": "2018-07-21",
-    "rating": 4,
+    "rating": 4, <-------- INTEGER
     "review_text": "Driver was good. No complaints",
-    "user_id": 2,
-    "driver_id": 1
+    "user_id": 2, <-------- INTEGER
+    "driver_id": 1 <-------- INTEGER
 }
 ```
 
