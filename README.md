@@ -284,10 +284,10 @@
     "id": 4,
     "reviewer": "Example User",
     "review_date": "2019-09-12",
-    "rating": 5, <-------- INTEGER
+    "rating": 5,
     "review_text": "Great driver. No issues at all",
-    "user_id": 2, <-------- INTEGER
-    "driver_id": 3 <-------- INTEGER
+    "user_id": 2,
+    "driver_id": 3
 }
 ```
 
@@ -314,10 +314,10 @@
     "id": 4,
     "reviewer": "Update Example",
     "review_date": "2018-07-21",
-    "rating": 4, <-------- INTEGER
+    "rating": 4,
     "review_text": "Driver was good. No complaints",
-    "user_id": 2, <-------- INTEGER
-    "driver_id": 1 <-------- INTEGER
+    "user_id": 2,
+    "driver_id": 1
 }
 ```
 
