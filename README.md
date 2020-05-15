@@ -28,7 +28,6 @@
   users_plot: "165",
   users_phone_number: "164-1535-1256",
   users_email: "exampleuser@gmail.com",
-  password: "$2a$11$0winsjO6UOd15Lvp8OPkSulb.3ygTiI0TEm5jh8ajn8p2I5kNqnci",
   due_date: "2019-12-15",
   role: "user"
 }
@@ -58,7 +57,6 @@
   drivers_plot: "126",
   drivers_phone_number: "455-743-4567",
   drivers_email: "exampledriver@gmail.com",
-  password: "$2a$11$6KrbRqwqt3cYwbyqtu8xVeIOi1WdsdkDpZS9zBc9W.dVT5k7X/g9W",
   drivers_price: 50,
   role: "driver"
 }
@@ -123,7 +121,6 @@
     "drivers_plot": "126",
     "drivers_phone_number": "455-743-4567",
     "drivers_email": "exampledriver@gmail.com",
-    "password": "$2a$11$mxRYg747sGwIGz1/TR4ocuTA7Y1okuzqp/g3sWKlDXZrpqAr/oajG",
     "drivers_price": 50,
     "role": "driver"
 }
@@ -168,7 +165,6 @@
     "drivers_plot": "321",
     "drivers_phone_number": "234-123-4567",
     "drivers_email": "seeddriver3@gmail.com",
-    "password": "$2a$10$nQYuikOFqTed.qKJQyhp1.hNOfIxHbzycv620x60e.pzCoxv/R21W",
     "drivers_price": 85,
     "role": "driver"
 }
@@ -197,7 +193,6 @@
     "users_plot": "165",
     "users_phone_number": "164-1535-1256",
     "users_email": "exampleuser@gmail.com",
-    "password": "$2a$11$CtbBrM.jNqDHhUN3g1iZnOi8dSXndORhqk3203TK6AUafIhKSFP.2",
     "due_date": "2019-12-15",
     "role": "user"
 }
@@ -244,7 +239,6 @@
     "users_plot": "111",
     "users_phone_number": "125-1234-3456",
     "users_email": "seeduser1@gmail.com",
-    "password": "$2a$10$CWHJ2fQ8j5y8ZBQ6WnSs5.JRu0KSwBLrRg6GMbLlIB7LKO5OCcoQq",
     "due_date": "2019-12-15",
     "role": "user"
 }
