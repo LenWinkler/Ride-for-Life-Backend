@@ -1,3 +1,6 @@
+# Ride for Life Backend
+## Built for an app that connects pregnant mothers in Uganda with motorcycle ambulance drivers in their area. The goal was to improve outcomes for mothers and their babies by quickly getting them to a hospital when they need to deliver.
+----
 ## Endpoints
 
 #### **All values are strings unless otherwise noted**
@@ -5,7 +8,7 @@
 #### **All values are required unless otherwise noted**
 
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/register_user
-* Endpoint to register a new user
+* Endpoint to **register a *new user***
 * Request example:
 
 ```
@@ -34,7 +37,7 @@
 ```
 
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/register_driver
-* Endpoint to register a new driver
+* Endpoint to **register a *new driver***
 * Request example:
 
 ```
@@ -63,7 +66,7 @@
 ```
 
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/user_login
-* Endpoint to login as a user
+* Endpoint to **login as a *user***
 * Request example: 
 
 ```
@@ -83,7 +86,7 @@
 ```
 
 ### POST  https://ride-for-life-back-end.herokuapp.com/api/auth/driver_login
-* Endpoint to login as a driver
+* Endpoint to **login as a *driver***
 * Request example:
 
 
@@ -107,11 +110,11 @@
 ------------------------------------------
 
 ### GET  https://ride-for-life-back-end.herokuapp.com/api/drivers
-* Endpoint to get list of all drivers
+* Endpoint to **get** list of ***all* drivers**
 
 ### GET https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
 
-* Endpoint to get single driver by id
+* Endpoint to **get *single driver* by id**
 * Returns driver's info:
 
 ```
@@ -128,7 +131,7 @@
 
 ### GET https://ride-for-life-back-end.herokuapp.com/api/drivers/:id/reviews
 
-* Endpoint to get all reviews associated with a specific driver id
+* Endpoint to **get all reviews associated with a specific *driver* id
 * Returns an array of review objects:
 
 ```
@@ -147,7 +150,7 @@
 
 ### PUT https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
 
-* Endpoint to update info for a driver
+* Endpoint to **update info for a *driver***
 * Request example:
 
 ```
@@ -172,7 +175,7 @@
 
 ### DELETE https://ride-for-life-back-end.herokuapp.com/api/drivers/:id
 
-* Endpoint to delete a driver
+* Endpoint to **delete a *driver***
 * Returns success message:
 
 ```
@@ -183,7 +186,7 @@
 
 ### GET https://ride-for-life-back-end.herokuapp.com/api/users/:id
 
-* Endpoint to get user by id
+* Endpoint to **get *user* by id**
 * Returns user's info:
 
 ```
@@ -200,7 +203,7 @@
 
 ### GET https://ride-for-life-back-end.herokuapp.com/api/users/:id/reviews
 
-* Endpoint to get all reviews associated with a user id
+* Endpoint to **get all reviews associated with a *user* id**
 * Returns an array of review objects:
 
 ```
@@ -219,7 +222,7 @@
 
 ### PUT https://ride-for-life-back-end.herokuapp.com/api/users/:id
 
-* Endpoint to update info for a user
+* Endpoint to **update info for a *user***
 * Request example:
 
 ```
@@ -246,7 +249,7 @@
 
 ### DELETE https://ride-for-life-back-end.herokuapp.com/api/users/:id
 
-* Endpoint to delete a user
+* Endpoint to **delete a *user***
 * Returns success message:
 
 ```
@@ -257,7 +260,7 @@
 
 ### POST https://ride-for-life-back-end.herokuapp.com/api/reviews
 
-* Endpoint to add a review
+* Endpoint to **add a review**
 * Request example:
 
 ```
@@ -287,7 +290,7 @@
 
 ### PUT https://ride-for-life-back-end.herokuapp.com/api/reviews/:id
 
-* Endpoint to update a review
+* Endpoint to **update a review**
 * Request example:
 
 ```
@@ -317,7 +320,7 @@
 
 ### DELETE https://ride-for-life-back-end.herokuapp.com/api/reviews/:id
 
-* Endpoint to delete a review
+* Endpoint to **delete a review**
 * Returns success message:
 
 ```
