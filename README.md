@@ -1,6 +1,6 @@
 # Ride for Life Backend
 ## Built for an app that connects pregnant mothers in Uganda with motorcycle ambulance drivers in their area. The goal was to improve outcomes for mothers and their babies by quickly getting them to a hospital when they need to deliver.
-----
+
 ## Endpoints
 
 #### **All values are strings unless otherwise noted**
